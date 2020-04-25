@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <title>Data</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/ext.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+<h1><span class="red">Applications Details</span> </h1><h2><a href="/">Home</a></h2>
+
+<table class="container">
+    <thead>
+    <tr>
+        <th><h1>Id</h1></th>
+        <th><h1>Name</h1></th>
+        <th><h1>Owner</h1></th>
+        <th><h1>Description</h1></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task : ${applications}">
+        <td th:text="${task.id}"></td>
+        <td th:text="${task.name}"></td>
+        <td th:text="${task.owner}"></td>
+        <td th:text="${task.description}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
