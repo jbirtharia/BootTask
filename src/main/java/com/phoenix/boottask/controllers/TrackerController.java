@@ -37,9 +37,6 @@ public class TrackerController {
 
     @PostMapping(Constant.SAVE_APPLICATION_URL)
     public String save(@Valid @ModelAttribute(Constant.APPLICATION) Application application, Model model, BindingResult result){
-        System.out.println("Result : "+result);
-        System.out.println("Result value : "+result.hasErrors());
-        System.out.println("Application : "+application);
         if (result.hasErrors())
             return Constant.FORM;
         else {
